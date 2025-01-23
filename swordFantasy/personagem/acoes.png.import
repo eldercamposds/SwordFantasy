@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxd7hs36wpulw"
-path="res://.godot/imported/Player_Actions.png-97112d725a71312ca571d36fed156509.ctex"
+path="res://.godot/imported/acoes.png-d3561779028e5fc91d120c9c8e3044e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://swordFantasy/personagem/Player_Actions.png"
-dest_files=["res://.godot/imported/Player_Actions.png-97112d725a71312ca571d36fed156509.ctex"]
+source_file="res://swordFantasy/personagem/acoes.png"
+dest_files=["res://.godot/imported/acoes.png-d3561779028e5fc91d120c9c8e3044e4.ctex"]
 
 [params]
 
