@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyn32yka0prsx"
-path="res://.godot/imported/Player.png-4de2df9760fb1bc70f41626d2e350aa7.ctex"
+path="res://.godot/imported/acoes_padrao.png-7cb6ada423b7ace694f0ce95103229d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://swordFantasy/personagem/Player.png"
-dest_files=["res://.godot/imported/Player.png-4de2df9760fb1bc70f41626d2e350aa7.ctex"]
+source_file="res://swordFantasy/personagem/acoes_padrao.png"
+dest_files=["res://.godot/imported/acoes_padrao.png-7cb6ada423b7ace694f0ce95103229d2.ctex"]
 
 [params]
 
