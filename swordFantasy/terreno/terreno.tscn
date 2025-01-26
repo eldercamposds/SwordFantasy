@@ -1,12 +1,12 @@
 [gd_scene load_steps=19 format=3 uid="uid://db64oqpj461qo"]
 
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Beach_Tile.png" id="1_7ge3o"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Cliff_Tile.png" id="2_20bwl"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Grass_Middle.png" id="3_d0kku"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Path_Tile.png" id="4_minms"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Path_Middle.png" id="5_jpa1h"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Water_Middle.png" id="6_wurj5"]
-[ext_resource type="Texture2D" path="res://swordFantasy/terreno/Tiles/Water_Tile.png" id="7_bx35e"]
+[ext_resource type="Texture2D" uid="uid://cdrxxstrnoh7x" path="res://swordFantasy/terreno/Tiles/Beach_Tile.png" id="1_7ge3o"]
+[ext_resource type="Texture2D" uid="uid://dh15y8ebj11gi" path="res://swordFantasy/terreno/Tiles/Cliff_Tile.png" id="2_20bwl"]
+[ext_resource type="Texture2D" uid="uid://dsck1tjlo0vh5" path="res://swordFantasy/terreno/Tiles/Grass_Middle.png" id="3_d0kku"]
+[ext_resource type="Texture2D" uid="uid://bv32rk8x7v0xs" path="res://swordFantasy/terreno/Tiles/Path_Tile.png" id="4_minms"]
+[ext_resource type="Texture2D" uid="uid://blvdngc58ej8h" path="res://swordFantasy/terreno/Tiles/Path_Middle.png" id="5_jpa1h"]
+[ext_resource type="Texture2D" uid="uid://dvckn8u7yjc6q" path="res://swordFantasy/terreno/Tiles/Water_Middle.png" id="6_wurj5"]
+[ext_resource type="Texture2D" uid="uid://diffkfdqjx1cf" path="res://swordFantasy/terreno/Tiles/Water_Tile.png" id="7_bx35e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oamto"]
 texture = ExtResource("1_7ge3o")
