@@ -40,7 +40,7 @@ func _sufixo_do_personagem() -> String:
 	if _acao_vertical == +1:
 		_area_de_ataque.position = Vector2(0, +12)
 		return "_baixo"
-		
+
 	return _sufixo_da_animacao
 
 func _definir_arma_atual() -> void:
@@ -69,7 +69,7 @@ func _atacar() -> void:
 func _animar() -> void:
 	if _pode_atacar == false:
 		return
-	if velocity:
+	if velocity :
 		_animador_do_personagem.play("andando" + _sufixo_da_animacao)
 		return
 	_animador_do_personagem.play("parado" + _sufixo_da_animacao)
