@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://co6dcc42qkkhw"]
+
+[ext_resource type="PackedScene" uid="uid://cbvqnsj567h5j" path="res://swordFantasy/decoracao/objeto_de_base.tscn" id="1_htl42"]
+[ext_resource type="Texture2D" uid="uid://bbmbs20p6e7fl" path="res://swordFantasy/decoracao/Oak_Tree_Small.png" id="2_mpnde"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_18ikf"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ymp1"]
+radius = 3.0
+
+[node name="ArvoreMenor" instance=ExtResource("1_htl42")]
+
+[node name="Colisao" parent="." index="0"]
+shape = SubResource("CircleShape2D_18ikf")
+
+[node name="ColisaoFisica" parent="CorpoFisico" index="0"]
+shape = SubResource("CircleShape2D_0ymp1")
+
+[node name="Textura" parent="." index="2"]
+position = Vector2(0, -7)
+texture = ExtResource("2_mpnde")
+hframes = 3
+frame = 1
