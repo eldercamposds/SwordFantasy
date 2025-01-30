@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://db64oqpj461qo"]
+[gd_scene load_steps=25 format=3 uid="uid://db64oqpj461qo"]
 
 [ext_resource type="Texture2D" uid="uid://cdrxxstrnoh7x" path="res://swordFantasy/terreno/Tiles/Beach_Tile.png" id="1_7ge3o"]
 [ext_resource type="Texture2D" uid="uid://dh15y8ebj11gi" path="res://swordFantasy/terreno/Tiles/Cliff_Tile.png" id="2_20bwl"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://blvdngc58ej8h" path="res://swordFantasy/terreno/Tiles/Path_Middle.png" id="5_jpa1h"]
 [ext_resource type="Texture2D" uid="uid://dvckn8u7yjc6q" path="res://swordFantasy/terreno/Tiles/Water_Middle.png" id="6_wurj5"]
 [ext_resource type="Texture2D" uid="uid://diffkfdqjx1cf" path="res://swordFantasy/terreno/Tiles/Water_Tile.png" id="7_bx35e"]
+[ext_resource type="Texture2D" uid="uid://cvitddnrx4mi8" path="res://swordFantasy/decoracao/Fences.png" id="8_ghn4t"]
+[ext_resource type="Texture2D" uid="uid://iukb5cvhnmkk" path="res://swordFantasy/decoracao/Outdoor_Decor_Free.png" id="9_tvelq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsoss"]
 texture = ExtResource("2_20bwl")
@@ -152,6 +154,74 @@ texture = ExtResource("1_7ge3o")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_l8rfu")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1qvq"]
+texture = ExtResource("8_ghn4t")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_dvtrx"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_k1qvq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk5bl"]
+texture = ExtResource("9_tvelq")
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+3:9/0 = 0
+3:10/0 = 0
+3:11/0 = 0
+2:11/0 = 0
+1:11/0 = 0
+0:11/0 = 0
+0:10/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+2:10/0 = 0
+1:10/0 = 0
+2:7/0 = 0
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k5xw6"]
+sources/1 = SubResource("TileSetAtlasSource_gk5bl")
+
 [node name="Terreno" type="Node2D"]
 
 [node name="Montanha" type="TileMapLayer" parent="."]
@@ -165,3 +235,10 @@ tile_set = SubResource("TileSet_ojk0t")
 
 [node name="Praia" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_wbfd7")
+
+[node name="Cerca" type="TileMapLayer" parent="."]
+enabled = false
+tile_set = SubResource("TileSet_dvtrx")
+
+[node name="Flores" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_k5xw6")

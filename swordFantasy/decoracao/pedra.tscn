@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7yfv2waads75"]
+
+[ext_resource type="PackedScene" uid="uid://cbvqnsj567h5j" path="res://swordFantasy/decoracao/objeto_de_base.tscn" id="1_ey64h"]
+[ext_resource type="Texture2D" uid="uid://iukb5cvhnmkk" path="res://swordFantasy/decoracao/Outdoor_Decor_Free.png" id="2_52w1p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwwvq"]
+radius = 8.06226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgbsx"]
+radius = 7.0
+
+[node name="Pedra" instance=ExtResource("1_ey64h")]
+
+[node name="Colisao" parent="." index="0"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_bwwvq")
+
+[node name="ColisaoFisica" parent="CorpoFisico" index="0"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_dgbsx")
+
+[node name="Textura" parent="." index="2"]
+position = Vector2(0, -8)
+texture = ExtResource("2_52w1p")
+region_enabled = true
+region_rect = Rect2(0, 48, 16, 16)

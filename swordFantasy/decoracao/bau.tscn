@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://hue13l2y63vu"]
+
+[ext_resource type="PackedScene" uid="uid://cbvqnsj567h5j" path="res://swordFantasy/decoracao/objeto_de_base.tscn" id="1_lbwmy"]
+[ext_resource type="Texture2D" uid="uid://dcifvw1221mhn" path="res://swordFantasy/decoracao/Chest.png" id="2_iyc0v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovged"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa24m"]
+size = Vector2(12, 5)
+
+[node name="Bau" instance=ExtResource("1_lbwmy")]
+
+[node name="Colisao" parent="." index="0"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_ovged")
+
+[node name="ColisaoFisica" parent="CorpoFisico" index="0"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_sa24m")
+
+[node name="Textura" parent="." index="2"]
+position = Vector2(0, -6)
+texture = ExtResource("2_iyc0v")
