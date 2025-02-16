@@ -10,6 +10,7 @@ radius = 8.0
 size = Vector2(12, 5)
 
 [node name="Bau" instance=ExtResource("1_lbwmy")]
+arma_que_destroi = "machado"
 
 [node name="Colisao" parent="." index="0"]
 position = Vector2(0, -5)

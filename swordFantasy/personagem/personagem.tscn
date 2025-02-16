@@ -2364,3 +2364,4 @@ position_smoothing_speed = 4.0
 shape = SubResource("CircleShape2D_v1lwk")
 
 [connection signal="timeout" from="TemporizadorDeAcoes" to="." method="_on_temporizador_de_acoes_timeout"]
+[connection signal="area_entered" from="AreaDeAtque" to="." method="_on_area_de_atque_area_entered"]

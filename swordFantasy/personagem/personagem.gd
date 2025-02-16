@@ -79,3 +79,8 @@ func _animar() -> void:
 func _on_temporizador_de_acoes_timeout() -> void:
 	set_process(true)
 	_pode_atacar = true
+
+
+func _on_area_de_atque_area_entered(_area: Area2D) -> void:
+	if _arma_atual == _area.arma_que_destroi:
+		_area.queue_free()

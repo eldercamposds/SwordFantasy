@@ -10,6 +10,7 @@ radius = 8.06226
 radius = 7.0
 
 [node name="Pedra" instance=ExtResource("1_ey64h")]
+arma_que_destroi = "picareta"
 
 [node name="Colisao" parent="." index="0"]
 position = Vector2(0, -7)

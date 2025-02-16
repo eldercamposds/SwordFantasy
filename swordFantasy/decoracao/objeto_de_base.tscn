@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cbvqnsj567h5j"]
+[gd_scene load_steps=2 format=3 uid="uid://cbvqnsj567h5j"]
+
+[ext_resource type="Script" path="res://swordFantasy/decoracao/objeto_de_base.gd" id="1_pm3j0"]
 
 [node name="ObjetoDeBase" type="Area2D"]
+script = ExtResource("1_pm3j0")
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
 
@@ -9,3 +12,5 @@
 [node name="ColisaoFisica" type="CollisionShape2D" parent="CorpoFisico"]
 
 [node name="Textura" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
