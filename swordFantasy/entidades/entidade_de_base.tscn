@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b4a6oevhpyrhh"]
+
+[node name="EntidadeDeBase" type="CharacterBody2D"]
+
+[node name="Textura" type="Sprite2D" parent="."]
+
+[node name="ColisaoFisica" type="CollisionShape2D" parent="."]
+
+[node name="Animador" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColisaoFisica")

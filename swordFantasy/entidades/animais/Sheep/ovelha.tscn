@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1flyt3w0hf2m"]
+
+[ext_resource type="PackedScene" uid="uid://dm4srum2ywu61" path="res://swordFantasy/entidades/animais/animal_de_base.tscn" id="1_drhvf"]
+[ext_resource type="Texture2D" uid="uid://cenr6wyqdhhcv" path="res://swordFantasy/entidades/animais/Sheep/Sheep.png" id="2_16tq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8gmn"]
+size = Vector2(14, 4)
+
+[node name="ovelha" instance=ExtResource("1_drhvf")]
+
+[node name="Textura" parent="." index="0"]
+position = Vector2(1, -6)
+texture = ExtResource("2_16tq5")
+
+[node name="ColisaoFisica" parent="." index="1"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_u8gmn")

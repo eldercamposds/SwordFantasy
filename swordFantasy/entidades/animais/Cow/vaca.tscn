@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8xmiaijl5vfh"]
+
+[ext_resource type="PackedScene" uid="uid://dm4srum2ywu61" path="res://swordFantasy/entidades/animais/animal_de_base.tscn" id="1_k08x6"]
+[ext_resource type="Texture2D" uid="uid://cwvrk0jkx85" path="res://swordFantasy/entidades/animais/Cow/Cow.png" id="2_oe8ud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bu5j"]
+size = Vector2(20, 6)
+
+[node name="Vaca" instance=ExtResource("1_k08x6")]
+
+[node name="Textura" parent="." index="0"]
+position = Vector2(0, -8)
+texture = ExtResource("2_oe8ud")
+
+[node name="ColisaoFisica" parent="." index="1"]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_8bu5j")
