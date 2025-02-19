@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://dxw4vqx2jbikn"]
+[gd_scene load_steps=8 format=4 uid="uid://dxw4vqx2jbikn"]
 
 [ext_resource type="PackedScene" uid="uid://db64oqpj461qo" path="res://swordFantasy/terreno/terreno.tscn" id="1_1xk4i"]
 [ext_resource type="PackedScene" uid="uid://webbml6amdxc" path="res://swordFantasy/personagem/personagem.tscn" id="2_n0345"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://co6dcc42qkkhw" path="res://swordFantasy/decoracao/arvore_menor.tscn" id="4_btuhk"]
 [ext_resource type="PackedScene" uid="uid://hue13l2y63vu" path="res://swordFantasy/decoracao/bau.tscn" id="5_qih1n"]
 [ext_resource type="PackedScene" uid="uid://b7yfv2waads75" path="res://swordFantasy/decoracao/pedra.tscn" id="6_xthnw"]
+[ext_resource type="PackedScene" uid="uid://r0jp6ctu1jas" path="res://swordFantasy/entidades/animais/Chicken/galinha.tscn" id="7_i1eef"]
 
 [node name="Nivel" type="Node2D"]
 position = Vector2(-334, 177)
@@ -77,5 +78,8 @@ position = Vector2(732, -201)
 
 [node name="Pedra5" parent="YSort" instance=ExtResource("6_xthnw")]
 position = Vector2(1162, -91)
+
+[node name="Galinha" parent="YSort" instance=ExtResource("7_i1eef")]
+position = Vector2(749, 3)
 
 [editable path="Terreno"]

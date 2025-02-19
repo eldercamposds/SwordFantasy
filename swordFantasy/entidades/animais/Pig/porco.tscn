@@ -7,6 +7,9 @@
 size = Vector2(15, 4)
 
 [node name="porco" instance=ExtResource("1_ic081")]
+motion_mode = 0
+platform_on_leave = 0
+script = null
 
 [node name="Textura" parent="." index="0"]
 position = Vector2(0, -6)

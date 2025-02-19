@@ -1,6 +1,12 @@
-[gd_scene format=3 uid="uid://b4a6oevhpyrhh"]
+[gd_scene load_steps=2 format=3 uid="uid://b4a6oevhpyrhh"]
 
-[node name="EntidadeDeBase" type="CharacterBody2D"]
+[ext_resource type="Script" path="res://swordFantasy/entidades/entidade_de_base.gd" id="1_vnd0k"]
+
+[node name="EntidadeDeBase" type="CharacterBody2D" node_paths=PackedStringArray("_tempo_de_caminhada")]
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_vnd0k")
+_tempo_de_caminhada = NodePath("TempoDeCaminhada")
 
 [node name="Textura" type="Sprite2D" parent="."]
 
@@ -8,3 +14,8 @@
 
 [node name="Animador" type="AnimationPlayer" parent="."]
 root_node = NodePath("../ColisaoFisica")
+
+[node name="TempoDeCaminhada" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TempoDeCaminhada" to="." method="_on_tempo_de_caminhada_timeout"]

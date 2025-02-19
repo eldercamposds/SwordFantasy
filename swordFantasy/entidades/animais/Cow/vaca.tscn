@@ -7,6 +7,9 @@
 size = Vector2(20, 6)
 
 [node name="Vaca" instance=ExtResource("1_k08x6")]
+motion_mode = 0
+platform_on_leave = 0
+script = null
 
 [node name="Textura" parent="." index="0"]
 position = Vector2(0, -8)

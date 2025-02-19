@@ -7,6 +7,8 @@
 radius = 4.0
 
 [node name="Galinha" instance=ExtResource("1_js6j7")]
+platform_on_leave = 0
+script = null
 
 [node name="Textura" parent="." index="0"]
 position = Vector2(0, -6)
