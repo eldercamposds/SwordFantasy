@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dxw4vqx2jbikn"]
+[gd_scene load_steps=10 format=4 uid="uid://dxw4vqx2jbikn"]
 
 [ext_resource type="PackedScene" uid="uid://db64oqpj461qo" path="res://swordFantasy/terreno/terreno.tscn" id="1_1xk4i"]
 [ext_resource type="PackedScene" uid="uid://webbml6amdxc" path="res://swordFantasy/personagem/personagem.tscn" id="2_n0345"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://hue13l2y63vu" path="res://swordFantasy/decoracao/bau.tscn" id="5_qih1n"]
 [ext_resource type="PackedScene" uid="uid://b7yfv2waads75" path="res://swordFantasy/decoracao/pedra.tscn" id="6_xthnw"]
 [ext_resource type="PackedScene" uid="uid://r0jp6ctu1jas" path="res://swordFantasy/entidades/animais/Chicken/galinha.tscn" id="7_i1eef"]
+[ext_resource type="PackedScene" uid="uid://j8nwuo17lhds" path="res://swordFantasy/entidades/inimigos/slime.tscn" id="8_j0aqj"]
+[ext_resource type="PackedScene" uid="uid://bf54k7lhfnov" path="res://swordFantasy/entidades/animais/Chicken/galinha_2.tscn" id="9_xt6wm"]
 
 [node name="Nivel" type="Node2D"]
 position = Vector2(-334, 177)
@@ -35,7 +37,7 @@ tile_map_data = PackedByteArray("AAA5APz/AQAAAAAAAAA9AP//AQAAAAAAAABGAP//AQACAAE
 y_sort_enabled = true
 
 [node name="personagem" parent="YSort" instance=ExtResource("2_n0345")]
-position = Vector2(721, -18)
+position = Vector2(727, -2)
 
 [node name="Arvore2" parent="YSort" instance=ExtResource("3_xsmff")]
 position = Vector2(1024, -116)
@@ -80,6 +82,12 @@ position = Vector2(732, -201)
 position = Vector2(1162, -91)
 
 [node name="Galinha" parent="YSort" instance=ExtResource("7_i1eef")]
-position = Vector2(749, 3)
+position = Vector2(681, -43)
+
+[node name="Slime" parent="YSort" instance=ExtResource("8_j0aqj")]
+position = Vector2(694, -5)
+
+[node name="galinha2" parent="YSort" instance=ExtResource("9_xt6wm")]
+position = Vector2(712, 30)
 
 [editable path="Terreno"]
