@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4a6oevhpyrhh"]
+[gd_scene load_steps=3 format=3 uid="uid://b4a6oevhpyrhh"]
 
 [ext_resource type="Script" path="res://swordFantasy/entidades/entidade_de_base.gd" id="1_vnd0k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkrke"]
+radius = 8.0
 
 [node name="EntidadeDeBase" type="CharacterBody2D" node_paths=PackedStringArray("_tempo_de_caminhada")]
 motion_mode = 1
@@ -17,5 +20,10 @@ root_node = NodePath("../ColisaoFisica")
 
 [node name="TempoDeCaminhada" type="Timer" parent="."]
 one_shot = true
+
+[node name="AreaDeDano" type="Area2D" parent="." groups=["area_de_dano"]]
+
+[node name="Colisor" type="CollisionShape2D" parent="AreaDeDano" groups=["area_de_dano"]]
+shape = SubResource("CircleShape2D_lkrke")
 
 [connection signal="timeout" from="TempoDeCaminhada" to="." method="_on_tempo_de_caminhada_timeout"]

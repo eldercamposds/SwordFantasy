@@ -7,9 +7,7 @@
 size = Vector2(14, 4)
 
 [node name="ovelha" instance=ExtResource("1_drhvf")]
-motion_mode = 0
 platform_on_leave = 0
-script = null
 
 [node name="Textura" parent="." index="0"]
 position = Vector2(1, -6)

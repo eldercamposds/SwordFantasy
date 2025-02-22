@@ -5,6 +5,7 @@ var direcao: Vector2
 @export var _tempo_de_caminhada: Timer
 @export var _velocidade_de_movimento_normal: float = 32.0
 @export var _velocidade_de_movimento_correndo: float = 64.0
+@export var _vida: int = 10
 
 func _ready() -> void:
 	direcao = retornar_direcao_aleatoria()
@@ -36,3 +37,12 @@ func _on_tempo_de_caminhada_timeout() -> void:
 	if direcao == Vector2(0,0):
 		direcao = retornar_direcao_aleatoria()	
 	
+func perdendo_vida(_dano_recebido: int) -> void:
+	_vida -= _dano_recebido
+	if _vida > 0:
+		return
+	
+	_kill()
+	
+func _kill() -> void:
+	queue_free()
