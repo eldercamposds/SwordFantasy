@@ -1,16 +1,23 @@
 extends CharacterBody2D
 
 var direcao: Vector2
+
 var esta_correndo: bool = false
+var esta_atacando: bool = false
+
 var personagem: CharacterBody2D
 
 @export var _tempo_de_caminhada: Timer
 @export var _tempo_de_corrida: Timer
+@export var _tempo_de_ataque: Timer
+
 @export var _animador: AnimationPlayer
 @export var _textura: Sprite2D
+
 @export var _velocidade_de_movimento_normal: float = 32.0
 @export var _velocidade_de_movimento_correndo: float = 64.0
 @export var _vida: int = 10
+
 @export var _entidade_agrassiva: bool = false
 
 func _ready() -> void:
@@ -23,7 +30,16 @@ func _physics_process(delta: float) -> void:
 	if esta_correndo:
 		velocity = _velocidade_de_movimento_correndo * direcao
 	
-	if is_instance_valid(personagem):
+	if is_instance_valid(personagem) and personagem.esta_morto == true :
+		var distancia: float =global_position.distance_to(personagem.global_position)
+		if distancia<16:
+			if esta_atacando == false:
+				personagem.perdendo_vida(randi_range(1,5))
+				_tempo_de_ataque.start()
+				esta_atacando = true
+			
+			return
+			
 		direcao = global_position.direction_to(personagem.global_position)
 		velocity = _velocidade_de_movimento_normal * direcao
 		pass
@@ -107,3 +123,7 @@ func _on_area_de_deteccao_body_exited(_body: Node2D) -> void:
 	if _body.is_in_group("personagem"):
 		_tempo_de_caminhada.start(5.0)
 		personagem = null
+
+
+func _on_tempo_de_ataque_timeout() -> void:
+	pass # Replace with function body.

@@ -8,12 +8,13 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_484cp"]
 radius = 48.0
 
-[node name="EntidadeDeBase" type="CharacterBody2D" node_paths=PackedStringArray("_tempo_de_caminhada", "_tempo_de_corrida", "_animador", "_textura")]
+[node name="EntidadeDeBase" type="CharacterBody2D" node_paths=PackedStringArray("_tempo_de_caminhada", "_tempo_de_corrida", "_tempo_de_ataque", "_animador", "_textura")]
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_vnd0k")
 _tempo_de_caminhada = NodePath("TempoDeCaminhada")
 _tempo_de_corrida = NodePath("TempoDeCorrida")
+_tempo_de_ataque = NodePath("TempoDeAtaque")
 _animador = NodePath("Animador")
 _textura = NodePath("Textura")
 
@@ -40,7 +41,11 @@ one_shot = true
 [node name="Colisor" type="CollisionShape2D" parent="AreaDeDeteccao"]
 shape = SubResource("CircleShape2D_484cp")
 
+[node name="TempoDeAtaque" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="TempoDeCaminhada" to="." method="_on_tempo_de_caminhada_timeout"]
 [connection signal="timeout" from="TempoDeCorrida" to="." method="_on_tempo_de_corrida_timeout"]
 [connection signal="body_entered" from="AreaDeDeteccao" to="." method="_on_area_de_deteccao_body_entered"]
 [connection signal="body_exited" from="AreaDeDeteccao" to="." method="_on_area_de_deteccao_body_exited"]
+[connection signal="timeout" from="TempoDeAtaque" to="." method="_on_tempo_de_ataque_timeout"]
