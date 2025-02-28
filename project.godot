@@ -26,6 +26,8 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 area_de_dano=""
+personagem=""
+objetos=""
 
 [input]
 

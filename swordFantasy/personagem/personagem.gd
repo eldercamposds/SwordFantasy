@@ -85,10 +85,6 @@ func _on_area_de_atque_area_entered(_area: Area2D) -> void:
 	if _area.is_in_group("area_de_dano"):
 		_area.get_parent().perdendo_vida(randi_range(1,5))
 		return
-	
-	#if _area.is_in_group("area_de_dano"):
-		#_area.queue_free()
-		
-		
-	if _arma_atual == _area.arma_que_destroi:
-		_area.perdendo_vida(randi_range(1,5))
+	if _area.is_in_group("objetos"):
+		if _arma_atual == _area.arma_que_destroi:
+			_area.perdendo_vida(randi_range(1,5))

@@ -2308,7 +2308,7 @@ font_size = 8
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1lwk"]
 radius = 4.0
 
-[node name="personagem" type="CharacterBody2D" node_paths=PackedStringArray("_animador_do_personagem", "_temporizador_de_acoes", "_area_de_ataque", "_texto_arma_atual")]
+[node name="personagem" type="CharacterBody2D" node_paths=PackedStringArray("_animador_do_personagem", "_temporizador_de_acoes", "_area_de_ataque", "_texto_arma_atual") groups=["personagem"]]
 position = Vector2(161, 96)
 script = ExtResource("1_q3r78")
 _velocidade_de_movimento = 96.0

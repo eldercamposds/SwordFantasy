@@ -1,27 +1,59 @@
 extends CharacterBody2D
 
 var direcao: Vector2
+var esta_correndo: bool = false
+var personagem: CharacterBody2D
 
 @export var _tempo_de_caminhada: Timer
+@export var _tempo_de_corrida: Timer
+@export var _animador: AnimationPlayer
+@export var _textura: Sprite2D
 @export var _velocidade_de_movimento_normal: float = 32.0
 @export var _velocidade_de_movimento_correndo: float = 64.0
 @export var _vida: int = 10
+@export var _entidade_agrassiva: bool = false
 
 func _ready() -> void:
 	direcao = retornar_direcao_aleatoria()
 	_tempo_de_caminhada.start(5.0)
 	
 func _physics_process(delta: float) -> void:
+	
 	velocity = _velocidade_de_movimento_normal * direcao
+	if esta_correndo:
+		velocity = _velocidade_de_movimento_correndo * direcao
+	
+	if is_instance_valid(personagem):
+		direcao = global_position.direction_to(personagem.global_position)
+		velocity = _velocidade_de_movimento_normal * direcao
+		pass
+	
 	move_and_slide()
 	
 	_bounce()
+	_animar()
 
 func _bounce() -> void:
 	if get_slide_collision_count() > 0:
 		direcao = velocity.bounce(get_slide_collision(0).get_normal()).normalized()
 		
-
+func _animar() -> void:
+	if velocity.x > 0:
+		_textura.flip_h = true
+		if _entidade_agrassiva:
+			_textura.flip_h = false
+		
+	if velocity.x < 0:
+		_textura.flip_h = false
+		if _entidade_agrassiva:
+			_textura.flip_h = true
+		
+	if velocity != Vector2(0,0):
+		_animador.play("andando")
+		return
+	
+	_animador.play("parado")
+		
 func retornar_direcao_aleatoria() -> Vector2:
 	return Vector2(
 		[-1, 0, +1].pick_random(),
@@ -40,9 +72,38 @@ func _on_tempo_de_caminhada_timeout() -> void:
 func perdendo_vida(_dano_recebido: int) -> void:
 	_vida -= _dano_recebido
 	if _vida > 0:
+		if _entidade_agrassiva:
+			return
+		_tempo_de_corrida.start(5.0)
+		direcao = retornar_direcao_aleatoria()
+		_tempo_de_caminhada.stop()
+		esta_correndo = true
 		return
 	
 	_kill()
 	
 func _kill() -> void:
 	queue_free()
+
+
+func _on_tempo_de_corrida_timeout() -> void:
+	_tempo_de_caminhada.start(5.0)
+	esta_correndo = false
+
+
+func _on_area_de_deteccao_body_entered(_body: Node2D) -> void:
+	if _entidade_agrassiva == false:
+		return
+		
+	if _body.is_in_group("personagem"):
+		_tempo_de_caminhada.stop()
+		personagem = _body
+
+
+
+func _on_area_de_deteccao_body_exited(_body: Node2D) -> void:
+	if _entidade_agrassiva == false:
+		return
+	if _body.is_in_group("personagem"):
+		_tempo_de_caminhada.start(5.0)
+		personagem = null

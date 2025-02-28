@@ -38,46 +38,46 @@ y_sort_enabled = true
 [node name="personagem" parent="YSort" instance=ExtResource("2_n0345")]
 position = Vector2(727, -2)
 
-[node name="Arvore2" parent="YSort" instance=ExtResource("3_xsmff")]
+[node name="Arvore2" parent="YSort" groups=["area_de_dano"] instance=ExtResource("3_xsmff")]
 position = Vector2(1024, -116)
 
-[node name="Arvore3" parent="YSort" instance=ExtResource("3_xsmff")]
+[node name="Arvore3" parent="YSort" groups=["area_de_dano"] instance=ExtResource("3_xsmff")]
 position = Vector2(1027, 1)
 
-[node name="Arvore4" parent="YSort" instance=ExtResource("3_xsmff")]
+[node name="Arvore4" parent="YSort" groups=["area_de_dano"] instance=ExtResource("3_xsmff")]
 position = Vector2(812, -12)
 
-[node name="Arvore5" parent="YSort" instance=ExtResource("3_xsmff")]
+[node name="Arvore5" parent="YSort" groups=["area_de_dano"] instance=ExtResource("3_xsmff")]
 position = Vector2(728, -136)
 
-[node name="ArvoreMenor" parent="YSort" instance=ExtResource("4_btuhk")]
+[node name="ArvoreMenor" parent="YSort" groups=["area_de_dano"] instance=ExtResource("4_btuhk")]
 position = Vector2(850, -191)
 
-[node name="ArvoreMenor2" parent="YSort" instance=ExtResource("4_btuhk")]
+[node name="ArvoreMenor2" parent="YSort" groups=["area_de_dano"] instance=ExtResource("4_btuhk")]
 position = Vector2(936, -95)
 
-[node name="ArvoreMenor3" parent="YSort" instance=ExtResource("4_btuhk")]
+[node name="ArvoreMenor3" parent="YSort" groups=["area_de_dano"] instance=ExtResource("4_btuhk")]
 position = Vector2(655, -18)
 
-[node name="ArvoreMenor4" parent="YSort" instance=ExtResource("4_btuhk")]
+[node name="ArvoreMenor4" parent="YSort" groups=["area_de_dano"] instance=ExtResource("4_btuhk")]
 position = Vector2(1097, -191)
 
-[node name="Bau" parent="YSort" instance=ExtResource("5_qih1n")]
+[node name="Bau" parent="YSort" groups=["area_de_dano"] instance=ExtResource("5_qih1n")]
 position = Vector2(822, -19)
 
-[node name="Pedra" parent="YSort" instance=ExtResource("6_xthnw")]
+[node name="Pedra" parent="YSort" groups=["area_de_dano"] instance=ExtResource("6_xthnw")]
 position = Vector2(671, 18)
 
-[node name="Pedra2" parent="YSort" instance=ExtResource("6_xthnw")]
+[node name="Pedra2" parent="YSort" groups=["area_de_dano"] instance=ExtResource("6_xthnw")]
 position = Vector2(885, -84)
 
-[node name="Pedra3" parent="YSort" instance=ExtResource("6_xthnw")]
+[node name="Pedra3" parent="YSort" groups=["area_de_dano"] instance=ExtResource("6_xthnw")]
 position = Vector2(928, -218)
 
-[node name="Pedra4" parent="YSort" instance=ExtResource("6_xthnw")]
+[node name="Pedra4" parent="YSort" groups=["area_de_dano"] instance=ExtResource("6_xthnw")]
 position = Vector2(732, -201)
 
-[node name="Pedra5" parent="YSort" instance=ExtResource("6_xthnw")]
+[node name="Pedra5" parent="YSort" groups=["area_de_dano"] instance=ExtResource("6_xthnw")]
 position = Vector2(1162, -91)
 
 [node name="Slime" parent="YSort" instance=ExtResource("8_j0aqj")]
