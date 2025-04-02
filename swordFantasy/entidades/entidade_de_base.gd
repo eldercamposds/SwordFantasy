@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	if esta_correndo:
 		velocity = _velocidade_de_movimento_correndo * direcao
 	
-	if is_instance_valid(personagem) and personagem.esta_morto == true :
+	if is_instance_valid("personagem") and personagem.esta_morto == true :
 		var distancia: float =global_position.distance_to(personagem.global_position)
 		if distancia<16:
 			if esta_atacando == false:
