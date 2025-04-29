@@ -3,13 +3,14 @@ extends CharacterBody2D
 var _arma_atual: String = "machado"
 var _sufixo_da_animacao: String = "_baixo"
 var _pode_atacar: bool=true
+var estar_vivo: bool=true
 
 @export var _velocidade_de_movimento = 128.0
 @export var _animador_do_personagem: AnimationPlayer
 @export var _temporizador_de_acoes: Timer
 @export var _area_de_ataque: Area2D
 @export var _texto_arma_atual: Label
-
+@export var _vida: int=10
 
 func _process(_delta: float) -> void:
 	var direcao = Input.get_vector(
@@ -79,3 +80,35 @@ func _animar() -> void:
 func _on_temporizador_de_acoes_timeout() -> void:
 	set_process(true)
 	_pode_atacar = true
+
+
+func _on_area_de_atque_area_entered(_area: Area2D) -> void:
+	if _area.is_in_group("area_de_dano"):
+		_area.get_parent().perdendo_vida(randi_range(1,5))
+		return
+	if _area.is_in_group("objetos"):
+		if _arma_atual == _area.arma_que_destroi:
+			_area.perdendo_vida(randi_range(1,5))
+			
+func perdendo_vida(_dano_recebido: int) -> void:
+	if estar_vivo == false:
+		return
+		
+	_vida -= _dano_recebido
+	if _vida > 0:
+		$AnimadorVida.play("perdendo_vida")
+		return	
+	_kill()
+	
+func _kill() -> void:
+	estar_vivo=false
+	set_process(false)
+	_animador_do_personagem.play("morte")
+
+
+func _on_animador_do_personagem_animation_finished(_anim_name: StringName) -> void:
+	if _anim_name == "morte":
+		print("Game Over")
+		$ColisaoDoPersonagem.set_deferred("disabled", true)
+		$Label.hide()
+	

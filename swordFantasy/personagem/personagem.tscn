@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://webbml6amdxc"]
+[gd_scene load_steps=41 format=3 uid="uid://webbml6amdxc"]
 
 [ext_resource type="Script" path="res://swordFantasy/personagem/personagem.gd" id="1_q3r78"]
 [ext_resource type="Texture2D" uid="uid://dxd7hs36wpulw" path="res://swordFantasy/personagem/acoes.png" id="2_0vgsk"]
@@ -155,6 +155,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
 }
 
 [sub_resource type="Animation" id="Animation_1ou3i"]
@@ -1943,6 +1955,59 @@ tracks/5/keys = {
 "values": [ExtResource("2_0vgsk")]
 }
 
+[sub_resource type="Animation" id="Animation_5hxgl"]
+resource_name = "morte"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [54, 55, 56, 57, 58]
+}
+
 [sub_resource type="Animation" id="Animation_nps5k"]
 resource_name = "parado_baixo"
 length = 0.6
@@ -2007,6 +2072,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
 }
 
 [sub_resource type="Animation" id="Animation_ckta4"]
@@ -2074,6 +2151,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
+}
 
 [sub_resource type="Animation" id="Animation_u3efv"]
 resource_name = "parado_direita"
@@ -2139,6 +2228,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
 }
 
 [sub_resource type="Animation" id="Animation_rh4eq"]
@@ -2206,6 +2307,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1amcu")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4rtab"]
 _data = {
@@ -2234,6 +2347,7 @@ _data = {
 "atacando_regador_cima": SubResource("Animation_b002r"),
 "atacando_regador_direita": SubResource("Animation_nbc5g"),
 "atacando_regador_esquerda": SubResource("Animation_e4gi3"),
+"morte": SubResource("Animation_5hxgl"),
 "parado_baixo": SubResource("Animation_nps5k"),
 "parado_cima": SubResource("Animation_ckta4"),
 "parado_direita": SubResource("Animation_u3efv"),
@@ -2245,11 +2359,51 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_h6b0a"]
 font_size = 8
 
-[node name="personagem" type="CharacterBody2D" node_paths=PackedStringArray("_animador_do_personagem", "_temporizador_de_acoes", "_area_de_ataque", "_texto_arma_atual")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_v1lwk"]
+radius = 4.0
+
+[sub_resource type="Animation" id="Animation_bbhjm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4cpq2"]
+resource_name = "perdendo_vida"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.6), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yrorx"]
+_data = {
+"RESET": SubResource("Animation_bbhjm"),
+"perdendo_vida": SubResource("Animation_4cpq2")
+}
+
+[node name="personagem" type="CharacterBody2D" node_paths=PackedStringArray("_animador_do_personagem", "_temporizador_de_acoes", "_area_de_ataque", "_texto_arma_atual") groups=["personagem"]]
 position = Vector2(161, 96)
 script = ExtResource("1_q3r78")
 _velocidade_de_movimento = 96.0
-_animador_do_personagem = NodePath("AnimationPlayer")
+_animador_do_personagem = NodePath("AnimadorDoPersonagem")
 _temporizador_de_acoes = NodePath("TemporizadorDeAcoes")
 _area_de_ataque = NodePath("AreaDeAtque")
 _texto_arma_atual = NodePath("Label")
@@ -2260,7 +2414,7 @@ texture = ExtResource("2_1amcu")
 hframes = 6
 vframes = 10
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimadorDoPersonagem" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_4rtab")
 }
@@ -2297,4 +2451,14 @@ horizontal_alignment = 1
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
+[node name="ColisaoDoPersonagem" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v1lwk")
+
+[node name="AnimadorVida" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yrorx")
+}
+
+[connection signal="animation_finished" from="AnimadorDoPersonagem" to="." method="_on_animador_do_personagem_animation_finished"]
 [connection signal="timeout" from="TemporizadorDeAcoes" to="." method="_on_temporizador_de_acoes_timeout"]
+[connection signal="area_entered" from="AreaDeAtque" to="." method="_on_area_de_atque_area_entered"]
